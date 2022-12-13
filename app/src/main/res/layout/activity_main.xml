@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    android:orientation="vertical">
 
-    <Button
+    <TextView
+        android:id="@+id/txtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pasar Lista"
-        android:textSize="32dp"
-        android:onClick="PasarLista"/>
+        android:layout_marginTop="30dp"
+        android:text="Bienvenido"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32dp" />
 
-    <Button
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnProfile"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Ver Lista de Asistencia"
-        android:textSize="32dp"
-        android:onClick="VerLista"/>
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/btn_lightblue"
+        android:text="Perfil del usuario"
+        android:textSize="20dp"
+        android:onClick="ViewProfile"/>
 
-</LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNFC"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_purple"
+        android:text="Tomar Asistencia"
+        android:textSize="20dp"
+        android:onClick="GetAttendance"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnList"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnNFC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_pink"
+        android:onClick="GetList"
+        android:text="Asistencia"
+        android:textSize="20dp" />
+
+</RelativeLayout>

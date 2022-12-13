@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/opensansbold"
+        android:gravity="center"
+        android:text="Universidad Tecnológica \n de Panamá \n Facultad de Sistemas \n\n Sistema de Asistencia"
+        android:textSize="25dp" />
+
+
+    <ImageView
+        android:id="@+id/imvUtp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/lblTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/logo_utp" />
+
+    <ImageView
+        android:id="@+id/imvFisc"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/lblTitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/logo_fisc" />
+
+    <ImageView
+        android:id="@+id/imvId"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imvUtp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/id" />
+
+    <EditText
+        android:id="@+id/tbId"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imvUtp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/imvId"
+        android:fontFamily="@font/opensansregular"
+        android:hint="Correo" />
+
+    <ImageView
+        android:id="@+id/imvPwd"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imvId"
+        android:layout_marginLeft="65dp"
+        android:src="@drawable/key" />
+
+    <EditText
+        android:id="@+id/tbPwd"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imvId"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/imvPwd"
+        android:fontFamily="@font/opensansregular"
+        android:hint="Contraseña"
+        android:inputType="textPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tbPwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_blue"
+        android:fontFamily="@font/opensansbold"
+        android:text="Ingresar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:onClick="Login"/>
+
+
+
+</RelativeLayout>

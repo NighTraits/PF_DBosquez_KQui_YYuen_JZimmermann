@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void PasarLista(View v){
+    public void GetAttendance(View v){
         startActivity(new Intent(this,AsistenciaActivity.class));
     }
 
-    public void VerLista(View v){
+    public void GetList(View v){
         startActivity(new Intent(this,ListadoAsistenciaActivity.class));
     }
 }
