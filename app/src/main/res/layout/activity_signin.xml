@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:layout_marginRight="15dp"
-        android:layout_toRightOf="@+id/lblName"/>
+        android:layout_toRightOf="@+id/lblName" />
 
     <TextView
         android:id="@+id/lblLastName"
@@ -51,10 +51,10 @@
         android:id="@+id/tbLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tbName"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:layout_toRightOf="@+id/lblLastName"
-        android:layout_below="@+id/tbName"/>
+        android:layout_toRightOf="@+id/lblLastName" />
 
     <TextView
         android:id="@+id/lblId"
@@ -77,7 +77,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
         android:layout_toRightOf="@+id/lblId"
-        android:inputType="number"/>
+        />
 
     <TextView
         android:id="@+id/lblEmail"
@@ -98,7 +98,7 @@
         android:layout_below="@+id/tbId"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:layout_toRightOf="@+id/lblEmail"/>
+        android:layout_toRightOf="@+id/lblEmail" />
 
     <TextView
         android:id="@+id/lblPwd"
@@ -123,6 +123,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblPwd"
@@ -130,7 +131,6 @@
         android:layout_marginTop="75dp"
         android:background="@drawable/btn_blue"
         android:fontFamily="@font/opensansbold"
-        android:onClick="ChangePassword"
         android:text="Registrar"
         android:textColor="@color/white"
         android:textSize="15dp" />
