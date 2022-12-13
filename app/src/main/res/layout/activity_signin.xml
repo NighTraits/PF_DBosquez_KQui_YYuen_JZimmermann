@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:layout_marginRight="15dp"
-        android:layout_toRightOf="@+id/lblName" />
+        android:layout_toRightOf="@+id/lblName"/>
 
     <TextView
         android:id="@+id/lblLastName"
@@ -76,7 +76,8 @@
         android:layout_below="@+id/tbLastName"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:layout_toRightOf="@+id/lblId" />
+        android:layout_toRightOf="@+id/lblId"
+        android:inputType="number"/>
 
     <TextView
         android:id="@+id/lblEmail"
@@ -97,7 +98,7 @@
         android:layout_below="@+id/tbId"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:layout_toRightOf="@+id/lblEmail" />
+        android:layout_toRightOf="@+id/lblEmail"/>
 
     <TextView
         android:id="@+id/lblPwd"
