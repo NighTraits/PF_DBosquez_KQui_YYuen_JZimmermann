@@ -19,7 +19,7 @@ public class ListadoAsistenciaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listado_asistencia);
+        setContentView(R.layout.activity_attendance_list);
 
         lstAsistencia= (ListView)findViewById(R.id.lstAsistencia);
 

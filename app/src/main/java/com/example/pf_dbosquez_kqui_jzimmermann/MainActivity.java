@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
     }
 
     public void GetAttendance(View v){
@@ -20,5 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void GetList(View v){
         startActivity(new Intent(this,ListadoAsistenciaActivity.class));
+    }
+
+    public void SignIn(View v){
+        startActivity(new Intent(this,SignInActivity.class));
     }
 }
