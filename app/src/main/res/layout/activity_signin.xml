@@ -118,6 +118,7 @@
         android:layout_below="@+id/tbEmail"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
+        android:inputType="textPassword"
         android:layout_toRightOf="@+id/lblPwd" />
 
 
@@ -129,7 +130,7 @@
         android:layout_marginTop="75dp"
         android:background="@drawable/btn_blue"
         android:fontFamily="@font/opensansbold"
-        android:onClick="ChangePassword"
+        android:onClick="Register"
         android:text="Registrar"
         android:textColor="@color/white"
         android:textSize="15dp" />

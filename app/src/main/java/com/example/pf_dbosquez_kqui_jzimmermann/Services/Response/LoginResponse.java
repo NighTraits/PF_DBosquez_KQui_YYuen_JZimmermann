@@ -33,6 +33,10 @@ public class LoginResponse {
     @Expose
     private int docenteId;
 
+    @SerializedName("estudiante_id")
+    @Expose
+    private int estudianteId;
+
     public int getId() {
         return id;
     }
@@ -89,4 +93,11 @@ public class LoginResponse {
         this.docenteId = docenteId;
     }
 
+    public int getEstudianteId() {
+        return estudianteId;
+    }
+
+    public void setEstudianteId(int estudianteId) {
+        this.estudianteId = estudianteId;
+    }
 }

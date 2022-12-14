@@ -24,7 +24,6 @@ public  class ApiClient {
 
     public static ApiInterface getUserService(){
         ApiInterface userService = getRetrofit().create(ApiInterface.class);
-
         return userService;
     }
 

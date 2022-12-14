@@ -17,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PF_DBosquez_KQui_JZimmermann"
         tools:targetApi="31">
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -34,6 +35,11 @@
 
         <activity
             android:name=".AsistenciaActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".SignInActivity"
             android:exported="true">
         </activity>
 
