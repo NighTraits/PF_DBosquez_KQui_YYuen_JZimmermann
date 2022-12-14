@@ -7,80 +7,20 @@
     tools:context=".ListadoAsistenciaActivity">
 
     <TextView
-        android:id="@+id/txtDay"
-        android:layout_width="40dp"
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:text="Día: "
-        android:textColor="@color/black"
-        android:textSize="20dp" />
-
-    <Spinner
-        android:id="@+id/spnDay"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/txtDay" />
-
-    <TextView
-        android:id="@+id/txtMonth"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/spnDay"
-        android:text="Mes: "
-        android:textColor="@color/black"
-        android:textSize="20dp" />
-
-    <Spinner
-        android:id="@+id/spnMonth"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/txtMonth" />
-
-    <TextView
-        android:id="@+id/txtYear"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/spnMonth"
-        android:text="Año: "
-        android:textColor="@color/black"
-        android:textSize="20dp" />
-
-    <Spinner
-        android:id="@+id/spnYear"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/txtYear" />
-
-    <TextView
-        android:id="@+id/txtCourse"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtDay"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:text="Materia: "
-        android:textColor="@color/black"
-        android:textSize="20dp" />
-
-    <Spinner
-        android:id="@+id/spnCourse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDay"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/txtCourse" />
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:text="Asistencia"
+        android:textSize="25dp"
+        android:textColor="@color/black"/>
 
     <ListView
         android:id="@+id/lstAsistencia"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/txtCourse"
-        android:layout_marginTop="30dp" />
+        android:layout_below="@+id/lblTitle"
+        android:layout_marginTop="15dp" />
 
 </RelativeLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ import retrofit2.Response;
 
 public class SignInActivity extends AppCompatActivity {
 
-    TextView tbName, tbLastName, tbId, tbEmail, tbPassword;
+    EditText tbName, tbLastName, tbId, tbEmail, tbPassword;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +30,11 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void InitializeControllers(){
-        tbName = (TextView) findViewById(R.id.tbName);
-        tbLastName = (TextView) findViewById(R.id.tbLastName);
-        tbId = (TextView) findViewById(R.id.tbId);
-        tbEmail = (TextView) findViewById(R.id.tbEmail);
-        tbPassword = (TextView) findViewById(R.id.tbPwd);
+        tbName = (EditText) findViewById(R.id.tbName);
+        tbLastName = (EditText) findViewById(R.id.tbLastName);
+        tbId = (EditText) findViewById(R.id.tbId);
+        tbEmail = (EditText) findViewById(R.id.tbEmail);
+        tbPassword = (EditText) findViewById(R.id.tbPwd);
     }
 
     public void Register (View v){

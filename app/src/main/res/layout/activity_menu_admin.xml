@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AsistenciaActivity">
+    android:background="@color/light_skin">
 
     <TextView
         android:id="@+id/txtTitle"
@@ -24,32 +24,22 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/btn_lightblue"
+        android:onClick="ViewProfile"
         android:text="Perfil del usuario"
-        android:textSize="20dp"
-        android:onClick="ViewProfile"/>
+        android:textSize="20dp" />
+
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnNFC"
+        android:id="@+id/btnSave"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnProfile"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/btn_purple"
-        android:text="Tomar Asistencia"
-        android:textSize="20dp"
-        android:onClick="GetAttendance"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnList"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnNFC"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_pink"
+        android:background="@drawable/btn_blue"
         android:onClick="GetList"
-        android:text="Asistencia"
+        android:text="Grabar TAG"
         android:textSize="20dp" />
+
 
 </RelativeLayout>

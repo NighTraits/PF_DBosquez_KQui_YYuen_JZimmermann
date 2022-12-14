@@ -4,11 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LoginResponse {
-
-    @SerializedName("id")
-    @Expose
-    private int id;
-
     @SerializedName("nombres")
     @Expose
     private String nombres;
@@ -17,14 +12,6 @@ public class LoginResponse {
     @Expose
     private String apellidos;
 
-    @SerializedName("email")
-    @Expose
-    private String email;
-
-    @SerializedName("cedula")
-    @Expose
-    private String cedula;
-
     @SerializedName("role")
     @Expose
     private int role;
@@ -32,18 +19,6 @@ public class LoginResponse {
     @SerializedName("docente_id")
     @Expose
     private int docenteId;
-
-    @SerializedName("estudiante_id")
-    @Expose
-    private int estudianteId;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNombres() {
         return nombres;
@@ -61,22 +36,6 @@ public class LoginResponse {
         this.apellidos = apellidos;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
     public int getRole() {
         return role;
     }
@@ -91,13 +50,5 @@ public class LoginResponse {
 
     public void setDocenteId(int docenteId) {
         this.docenteId = docenteId;
-    }
-
-    public int getEstudianteId() {
-        return estudianteId;
-    }
-
-    public void setEstudianteId(int estudianteId) {
-        this.estudianteId = estudianteId;
     }
 }
