@@ -76,8 +76,7 @@
         android:layout_below="@+id/tbLastName"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:layout_toRightOf="@+id/lblId"
-        android:inputType="number"/>
+        android:layout_toRightOf="@+id/lblId"/>
 
     <TextView
         android:id="@+id/lblEmail"
