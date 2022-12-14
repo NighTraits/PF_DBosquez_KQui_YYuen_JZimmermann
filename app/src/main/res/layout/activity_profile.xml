@@ -44,18 +44,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_below="@+id/lblLastName"
-        android:text="Cédula: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/lblEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@+id/lblId"
-        android:text="Correo: "
+        android:text="Id: "
         android:textSize="20dp"
         android:textColor="@color/black"/>
 
@@ -63,7 +52,7 @@
         android:id="@+id/lblRol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblEmail"
+        android:layout_below="@+id/lblId"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
         android:text="Rol: "

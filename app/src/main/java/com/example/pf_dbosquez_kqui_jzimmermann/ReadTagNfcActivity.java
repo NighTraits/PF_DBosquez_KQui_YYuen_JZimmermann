@@ -6,11 +6,16 @@ import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.MifareClassic;
 import android.nfc.tech.MifareUltralight;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
@@ -21,11 +26,16 @@ public class ReadTagNfcActivity extends AppCompatActivity {
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
     final static String TAG = "nfc_test";
+    EditText tbName, tbId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfc);
+
+        setContentView(R.layout.activity_write_nfc);
+
+        tbName = (EditText) findViewById(R.id.tbName);
+        tbId = (EditText) findViewById(R.id.tbId);
 
         //Initialise NfcAdapter
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -40,7 +50,12 @@ public class ReadTagNfcActivity extends AppCompatActivity {
         //populate it with the details of the tag when it is scanned.
         //PendingIntent.getActivity(Context,requestcode(identifier for
         //                           intent),intent,int)
-        pendingIntent = PendingIntent.getActivity(this,0,new Intent(this,this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),0);
+        try{
+            pendingIntent = PendingIntent.getActivity(this,0,new Intent(this,this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),0);
+        }catch(Exception e){
+            Toast.makeText(this, "NFC no compatible", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
@@ -86,7 +101,6 @@ public class ReadTagNfcActivity extends AppCompatActivity {
         for (String tech : tag.getTechList()) {
             if (tech.equals(MifareUltralight.class.getName())) {
                 MifareUltralight mifareUlTag = MifareUltralight.get(tag);
-                readTag(mifareUlTag);
                 writeTag(mifareUlTag);
             }
         }
@@ -147,10 +161,8 @@ public class ReadTagNfcActivity extends AppCompatActivity {
     public void writeTag(MifareUltralight mifareUlTag) {
         try {
             mifareUlTag.connect();
-            mifareUlTag.writePage(4, "get ".getBytes(Charset.forName("US-ASCII")));
-            mifareUlTag.writePage(5, "fast".getBytes(Charset.forName("US-ASCII")));
-            mifareUlTag.writePage(6, " NFC".getBytes(Charset.forName("US-ASCII")));
-            mifareUlTag.writePage(7, " now".getBytes(Charset.forName("US-ASCII")));
+            mifareUlTag.writePage(10, tbId.getText().toString().getBytes(Charset.forName("US-ASCII")));
+            mifareUlTag.writePage(10, tbName.getText().toString().getBytes(Charset.forName("US-ASCII")));
         } catch (IOException e) {
             Log.e(TAG, "IOException while writing MifareUltralight...", e);
         } finally {
@@ -161,24 +173,9 @@ public class ReadTagNfcActivity extends AppCompatActivity {
             }
         }
     }
-    public String readTag(MifareUltralight mifareUlTag) {
-        try {
-            mifareUlTag.connect();
-            byte[] payload = mifareUlTag.readPages(4);
-            return new String(payload, Charset.forName("US-ASCII"));
-        } catch (IOException e) {
-            Log.e(TAG, "IOException while reading MifareUltralight message...", e);
-        } finally {
-            if (mifareUlTag != null) {
-                try {
-                    mifareUlTag.close();
-                }
-                catch (IOException e) {
-                    Log.e(TAG, "Error closing tag...", e);
-                }
-            }
-        }
-        return null;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void SaveTag(View v, Intent intent){
+        Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+        onNewIntent(intent);
     }
-
 }

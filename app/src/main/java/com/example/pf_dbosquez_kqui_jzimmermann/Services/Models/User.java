@@ -13,6 +13,7 @@ public class User {
     @Expose
     private String apellidos;
 
+
     @SerializedName("role")
     @Expose
     private int role;
@@ -64,4 +65,5 @@ public class User {
     public void setEstudianteId(int estudianteId) {
         this.estudianteId = estudianteId;
     }
+
 }

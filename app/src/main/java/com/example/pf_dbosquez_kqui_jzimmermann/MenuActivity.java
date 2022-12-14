@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MenuActivity extends AppCompatActivity {
 
     TextView txtTitle;
-    String name;
+    String name, apellido;
     int id, role;
 
     @Override
@@ -28,7 +28,7 @@ public class MenuActivity extends AppCompatActivity {
         }
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
-        txtTitle.setText(name);
+        txtTitle.setText("Bienvenido " + name + " " + apellido);
 
     }
 
@@ -37,7 +37,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void LoadTextViewBundle(Bundle b) {
-        name = "Bienvenido " + b.getString("nombre");
+        name = b.getString("nombre");
+        apellido = b.getString("apellido");
         id = b.getInt("id");
         role = b.getInt("rol");
         try {
@@ -59,15 +60,21 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void ViewProfile(View v){
-
+        Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+        Bundle b = new Bundle();
+        b.putString("nombre", name);
+        b.putString("apellido", apellido);
+        b.putInt("id", id);
+        b.putInt("rol", role);
+        i.putExtras(b);
+        startActivity(i);
     }
 
     public void ReadTag(View v){
-        startActivity(new Intent(this, SaveTagNfcActivity.class));
+        startActivity(new Intent(this, ReadTagNfcActivity.class));
     }
     //Usuario Estudiante: asistencia por asignatura
     public void GetList(View v){
-        startActivity(new Intent(this,AsistenciaActivity.class));
     }
 
     //Usuario profesor: obtener todos los grupos de la asignatura
@@ -77,5 +84,10 @@ public class MenuActivity extends AppCompatActivity {
 
     //Usuario profesor: obtener lista de asistencia por asignatura
     public void GetAttList(View v){
+        startActivity(new Intent(this,ListadoAsistenciaActivity.class));
+    }
+
+    public void GetAttendance(View v){
+        startActivity(new Intent(this, NfcAsistenciaActivity.class));
     }
 }

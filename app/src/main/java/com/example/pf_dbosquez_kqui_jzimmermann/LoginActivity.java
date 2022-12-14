@@ -54,11 +54,9 @@ public class LoginActivity extends AppCompatActivity {
 
             Call<LoginResponse> call = ApiClient.getUserService().userLogin(loginRequest);
             call.enqueue(new Callback<LoginResponse>() {
-
                 @Override
                 public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                     if (response.isSuccessful() && response.body()!=null) {
-                        String nombre = response.body().getUsuario().getNombres() + " " + response.body().getUsuario().getApellidos();
                         int rol = response.body().getUsuario().getRole();
                         int id=0;
 
@@ -69,7 +67,8 @@ public class LoginActivity extends AppCompatActivity {
                         }
 
                         Bundle b = new Bundle();
-                        b.putString("nombre", nombre);
+                        b.putString("nombre", response.body().getUsuario().getNombres());
+                        b.putString("apellido", response.body().getUsuario().getApellidos());
                         b.putInt("id", id);
                         b.putInt("rol", rol);
 

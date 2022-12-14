@@ -17,10 +17,10 @@ import android.widget.Toast;
 import com.example.pf_dbosquez_kqui_jzimmermann.Adapters.Estudiantes;
 import com.example.pf_dbosquez_kqui_jzimmermann.Helpers.Archivos;
 
-public class AsistenciaActivity extends AppCompatActivity {
+public class NfcAsistenciaActivity extends AppCompatActivity {
 
     NfcAdapter nfcAdapter;
-    PendingIntent mPendingIntent;
+    PendingIntent pendingIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +34,17 @@ public class AsistenciaActivity extends AppCompatActivity {
             finish();
         }
 
-        mPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this,
-                getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), PendingIntent.FLAG_MUTABLE);
-
+        try{
+            pendingIntent = PendingIntent.getActivity(this,0,new Intent(this,this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),0);
+        }catch(Exception e){
+            Toast.makeText(this, "NFC no compatible", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        nfcAdapter.enableForegroundDispatch(this, mPendingIntent, null, null);
+        nfcAdapter.enableForegroundDispatch(this, pendingIntent, null, null);
     }
 
     @Override

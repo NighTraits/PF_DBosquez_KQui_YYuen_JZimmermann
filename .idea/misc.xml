@@ -30,6 +30,7 @@
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_nfc.xml" value="0.3302083333333333" />
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_profile.xml" value="0.3302083333333333" />
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_signin.xml" value="0.3302083333333333" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_write_nfc.xml" value="0.3302083333333333" />
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_asignaturas.xml" value="0.3302083333333333" />
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_asistencia.xml" value="0.3302083333333333" />
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_attendance_template.xml" value="0.33" />
@@ -38,5 +39,5 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="Android API 28 Platform" project-jdk-type="Android SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android API 28 Platform" project-jdk-type="Android SDK" />
 </project>
