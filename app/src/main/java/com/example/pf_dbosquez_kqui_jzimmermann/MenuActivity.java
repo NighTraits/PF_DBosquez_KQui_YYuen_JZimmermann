@@ -63,20 +63,19 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void ReadTag(View v){
-
+        startActivity(new Intent(this, SaveTagNfcActivity.class));
     }
     //Usuario Estudiante: asistencia por asignatura
     public void GetList(View v){
-
+        startActivity(new Intent(this,AsistenciaActivity.class));
     }
 
     //Usuario profesor: obtener todos los grupos de la asignatura
     public void GetCourses(View v){
-
+        startActivity(new Intent(this,GroupListActivity.class));
     }
 
     //Usuario profesor: obtener lista de asistencia por asignatura
     public void GetAttList(View v){
-
     }
 }
