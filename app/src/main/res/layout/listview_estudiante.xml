@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblNombreEst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/opensansregular"
+        android:text="Johann Zimmermann"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/lblCedulaEst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/opensansregular"
+        android:text="09-0954-1834"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/lblEmailEst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/lblCedulaEst"
+        android:fontFamily="@font/opensansregular"
+        android:text="juan.alvarado@utp.ac.pa"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

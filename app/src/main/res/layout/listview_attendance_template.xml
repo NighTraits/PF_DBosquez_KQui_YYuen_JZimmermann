@@ -1,82 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="15dp">
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/lblId"
+        android:id="@+id/lblNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="id: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
+        android:textSize="32dp"/>
 
     <TextView
-        android:id="@+id/lblDate"
+        android:id="@+id/lblCedula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblId"
-        android:text="Fecha: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
+        android:textSize="32dp"/>
 
     <TextView
-        android:id="@+id/lblHour"
+        android:id="@+id/lblHora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblDate"
-        android:text="Hora: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
+        android:textSize="32dp"/>
 
-    <TextView
-        android:id="@+id/lblStuId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblHour"
-        android:text="ID Estudiante: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/lblGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblStuId"
-        android:text="Grupo asignatura ID: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/lblAttId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblGroup"
-        android:text="Estado asistencia ID: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/lblCreated"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblAttId"
-        android:text="Fecha de creación: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/lblUpdated"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblCreated"
-        android:text="Fecha de actualización: "
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-
-
-
-</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblFechaAsist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/opensansregular"
+        android:text="12-12-12"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/lblHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/opensansregular"
+        android:text="5:15 P.M."
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/lblRazon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/lblHora"
+        android:fontFamily="@font/opensansregular"
+        android:text="Ausente con excusa"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

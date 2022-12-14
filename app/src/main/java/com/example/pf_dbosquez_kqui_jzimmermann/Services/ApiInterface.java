@@ -1,5 +1,7 @@
 package com.example.pf_dbosquez_kqui_jzimmermann.Services;
 
+import com.example.pf_dbosquez_kqui_jzimmermann.Entities.Estudiante;
+import com.example.pf_dbosquez_kqui_jzimmermann.Entities.Grupo;
 import com.example.pf_dbosquez_kqui_jzimmermann.Services.Models.User;
 import com.example.pf_dbosquez_kqui_jzimmermann.Services.Request.LoginRequest;
 import com.example.pf_dbosquez_kqui_jzimmermann.Services.Request.RegisterRequest;
@@ -39,7 +41,14 @@ public interface ApiInterface {
 
     @POST("estudiante/asistencia")
     Call<Student> postStudentsSubject(@Body Attendance body);
+
 */
+    @GET("estudiantes/all")
+    Call<List<Estudiante>> getStudents();
+
+    @GET("grupos/all")
+    Call<List<Grupo>> getGroups();
+
     @POST("login")
     Call<LoginResponse> userLogin(@Body LoginRequest loginRequest);
 

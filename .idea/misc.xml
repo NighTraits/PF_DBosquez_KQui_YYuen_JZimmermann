@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_asignaturas.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_asistencias.xml" value="0.24895833333333334" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_attendance_list.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_estudiantes.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_menu_admin.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_student.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_asignaturas.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_asistencia.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_attendance_template.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_estudiante.xml" value="0.24895833333333334" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_groups_template.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/listview_grupos.xml" value="0.25" />
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_attendance.xml" value="0.3302083333333333" />
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_attendance_list.xml" value="0.3302083333333333" />
         <entry key="..\:/Workspace/AndroidStudioProjects/PF_DBosquez_KQui_YYuen_JZimmermann/app/src/main/res/layout/activity_login.xml" value="0.3302083333333333" />
@@ -19,5 +31,5 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android API 28 Platform" project-jdk-type="Android SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="Android API 28 Platform" project-jdk-type="Android SDK" />
 </project>
