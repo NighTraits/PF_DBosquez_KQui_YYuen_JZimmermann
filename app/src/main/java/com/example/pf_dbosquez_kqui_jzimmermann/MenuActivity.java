@@ -2,6 +2,7 @@ package com.example.pf_dbosquez_kqui_jzimmermann;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,5 +56,27 @@ public class MenuActivity extends AppCompatActivity {
         }catch (Exception e){
             Toast.makeText(this, "Role: " + role + " Error: " + e, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void ViewProfile(View v){
+
+    }
+
+    public void ReadTag(View v){
+
+    }
+    //Usuario Estudiante: asistencia por asignatura
+    public void GetList(View v){
+
+    }
+
+    //Usuario profesor: obtener todos los grupos de la asignatura
+    public void GetCourses(View v){
+
+    }
+
+    //Usuario profesor: obtener lista de asistencia por asignatura
+    public void GetAttList(View v){
+
     }
 }

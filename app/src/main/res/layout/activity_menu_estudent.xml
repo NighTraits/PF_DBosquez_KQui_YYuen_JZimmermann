@@ -24,9 +24,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/btn_lightblue"
+        android:onClick="ViewProfile"
         android:text="Perfil del usuario"
-        android:textSize="20dp"
-        android:onClick="ViewProfile"/>
+        android:textSize="20dp" />
 
 
     <androidx.appcompat.widget.AppCompatButton

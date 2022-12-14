@@ -24,9 +24,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/btn_lightblue"
+        android:onClick="ViewProfile"
         android:text="Perfil del usuario"
-        android:textSize="20dp"
-        android:onClick="ViewProfile"/>
+        android:textSize="20dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCourse"
@@ -36,7 +36,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_pink"
-        android:onClick="GetList"
+        android:onClick="GetCourses"
         android:text="Asignaturas"
         android:textSize="20dp" />
 
@@ -49,7 +49,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_blue"
-        android:onClick="GetList"
+        android:onClick="GetAttList"
         android:text="Lista de Asistencia"
         android:textSize="20dp" />
 

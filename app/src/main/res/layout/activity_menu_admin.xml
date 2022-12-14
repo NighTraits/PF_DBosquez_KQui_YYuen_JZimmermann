@@ -37,7 +37,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_blue"
-        android:onClick="GetList"
+        android:onClick="ReadTag"
         android:text="Grabar TAG"
         android:textSize="20dp" />
 
