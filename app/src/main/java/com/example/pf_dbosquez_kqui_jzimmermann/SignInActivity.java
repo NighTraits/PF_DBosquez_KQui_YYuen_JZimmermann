@@ -57,12 +57,12 @@ public class SignInActivity extends AppCompatActivity {
 
                         if (response.isSuccessful()) {
                             Toast.makeText(SignInActivity.this, "Registro exitoso", Toast.LENGTH_LONG).show();
-                            RegisterResponse RegisterResponse = response.body();
+                            RegisterResponse registerResponse = response.body();
 
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Toast.makeText(SignInActivity.this, "data: " + RegisterResponse.getMensaje(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignInActivity.this, "data: " + registerResponse.getMensaje(), Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(SignInActivity.this, LoginActivity.class));
                                 }
                             }, 700);

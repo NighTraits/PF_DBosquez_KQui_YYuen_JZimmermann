@@ -1,5 +1,6 @@
 package com.example.pf_dbosquez_kqui_jzimmermann.Services;
 
+import com.example.pf_dbosquez_kqui_jzimmermann.Services.Models.User;
 import com.example.pf_dbosquez_kqui_jzimmermann.Services.Request.LoginRequest;
 import com.example.pf_dbosquez_kqui_jzimmermann.Services.Request.RegisterRequest;
 import com.example.pf_dbosquez_kqui_jzimmermann.Services.Response.LoginResponse;
