@@ -2,7 +2,6 @@ package com.example.pf_dbosquez_kqui_jzimmermann;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +16,6 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_admin);
 
         Intent i = getIntent();
         Bundle b = getIntent().getExtras();

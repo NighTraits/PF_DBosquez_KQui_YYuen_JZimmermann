@@ -16,13 +16,9 @@ import com.example.pf_dbosquez_kqui_jzimmermann.Services.Request.LoginRequest;
 import com.example.pf_dbosquez_kqui_jzimmermann.Services.Response.LoginResponse;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -62,17 +58,33 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                     if (response.isSuccessful() && response.body()!=null) {
+                        String nombre = response.body().getUsuario().getNombres() + " " + response.body().getUsuario().getApellidos();
+                        int rol = response.body().getUsuario().getRole();
+                        int id=0;
 
-                        String apellido = response.body().getUsuario().getApellidos();
-                        Toast.makeText(LoginActivity.this,"data: " + apellido,Toast.LENGTH_LONG).show();
+                        if(rol == 2){
+                            id = response.body().getUsuario().getDocenteId();
+                        } else if (rol == 3) {
+                            id = response.body().getUsuario().getEstudianteId();
+                        }
+
+                        Bundle b = new Bundle();
+                        b.putString("nombre", nombre);
+                        b.putInt("id", id);
+                        b.putInt("rol", rol);
+
+                        Intent i = new Intent(getApplicationContext(), MenuActivity.class);
+                        i.putExtras(b);
+
+                        startActivity(i);
+
                     }
                 }
 
                 @Override
                 public void onFailure(Call<LoginResponse> call, Throwable t) {
-                    Toast.makeText(LoginActivity.this,"Oops! Something went wrong!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"Oops! Something went wrong!",Toast.LENGTH_LONG).show();
                 }
-
             });
         }
     }
